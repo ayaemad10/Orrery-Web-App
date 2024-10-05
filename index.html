@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An interactive 3D solar system orrery.">
+    <title>3D Orrery Solar System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="controls">
+        <input type="text" id="searchInput" placeholder="Search for a planet..." />
+        <button id="searchButton">Search</button>
+        <!-- <button id="toggleOrbits">Toggle Orbits</button>
+        <button id="resetCamera">Reset Camera</button> -->
+        <!-- <button onclick="searchAndDisplayPlanetInfo()">Search</button> -->
+    </div>
+    
+    <div id="planet-info"></div>
+    
+    <div id="container">
+        <canvas id="orreryCanvas" aria-label="3D Solar System Orrery" role="img">
+            Your browser does not support WebGL. Please use a WebGL-compatible browser to view this 3D solar system.
+        </canvas>
+    </div>
+
+    <!-- Info box for displaying planet information -->
+    <div id="infoBox"></div>
+
+    <!-- <div id="planetName" class="planet-name"></div> -->
+
+    <!-- Icons -->
+    <div class="sidebar">
+        <!-- <div class="icon" id="searchIcon" onclick="executeSearch()">
+            <img src="images/search-interface-symbol.png" alt="Search Icon">
+        </div> -->
+        
+        <div class="icon" id="viewIcon" data ="Control Data">
+            <img src="images/view.png" alt="View Icon">
+        </div>
+        
+        <div class="icon" id="folderIcon">
+            <img src="images/folder.png" alt="Folder Icon">
+        </div>
+        
+        <div class="icon" id="soundIcon">
+                <img src="images/marketing.png" alt="Sound Icon">
+        </div>
+        
+        <div class="icon" id="exitIcon">
+            <img src="images/exit.png" alt="Exit Icon">
+        </div>
+    </div>
+
+
+    <!-- Add Three.js for the 3D rendering -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/examples/js/controls/OrbitControls.js"></script>
+    <!-- Link to your script -->
+    <script src="script.js"></script>
+</body>
+</html>

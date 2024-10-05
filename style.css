@@ -1,0 +1,140 @@
+ /* Reset default margins and padding */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    overflow: hidden;  /* Prevent scrollbars from showing */
+}
+
+/* Full-screen container for the canvas */
+#container {
+    display: flex;
+    justify-content: center;  /* Horizontally center the canvas */
+    align-items: center;      /* Vertically center the canvas */
+    width: 100vw;             /* Full window width */
+    height: 100vh;            /* Full window height */
+    background-color: black;  /* Space-like background */
+}
+
+/* Make the canvas responsive */
+#orreryCanvas {
+    width: 100%;      /* Full width of the container */
+    height: 100%;     /* Full height of the container */
+    display: block;   /* Remove any inline-block spacing */
+}
+
+/* Optional: Styling for any future controls */
+.controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;  /* Position controls to the right of the screen */
+    color: white;
+    font-size: 14px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 8px;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid white;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Styling for the info box */
+#infoBox {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 30%;            /* Center vertically */
+    left: 0;             /* Align to the left edge */
+    transform: translateY(-50%); /* To vertically center the box */
+    color: white;
+    background-color: rgba(52, 70, 104, 0.7); /* Semi-transparent background */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;       /*Ensure it's above other elements*/
+    display: none;        /*Initially hidden*/
+    width: 20%;        /* Set a width for the info box */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Optional shadow for better visibility */
+    /* display: flex; */
+    /* flex-wrap: nowrap; */
+    /* flex-direction: column; */
+}
+
+.planet-name {
+    position: absolute; /* Allows positioning relative to the viewport */
+    color: white; /* Text color */
+    font-size: 16px; /* Size of the text */
+    pointer-events: none; /* Prevent mouse events */
+}
+
+
+
+
+/* Sidebar styling for the icons */
+.sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #505ac2; /* Dark background */
+    width: 45px; /* Adjust based on your icon width */
+    height: 30vh; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    border-radius: 20px;
+    /* border-bottom-right-radius: 20px; */
+    margin-bottom: 10px;
+    
+}
+
+/* .sidebar .logo {
+    font-size: 14px;
+    color: #ccc;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+} */
+
+.sidebar .icon {
+    margin-bottom: 5px;
+}
+
+.sidebar img {
+    width: 20px; /* Adjust based on your icon size */
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.sidebar img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 60px;
+    }
+    
+    .sidebar img {
+        width: 30px;
+    }
+}
